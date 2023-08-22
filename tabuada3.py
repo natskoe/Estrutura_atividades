@@ -16,3 +16,4 @@ while sair == False:
         
         if num == 1:
             print(num)
+            
