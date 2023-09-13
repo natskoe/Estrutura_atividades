@@ -8,19 +8,20 @@ bingo = []
 check = []
 
 for i in range(5):
+    #Gera as linhas
     linha = []
-    rep = 1
-while rep <= 5:
-    num = random.randint(0, 99)
-if check.count(num) == 1:
-continue
-else:
-check.append(num)
-linha.append(num)
-rep = rep + 1
-bingo.append(linha)
+    coluna = 1
+    while coluna <= 5:
+        num = random.randint(0, 99)
+        if check.count(num) == 1:
+            continue
+        else:
+            check.append(num)
+            linha.append(num)
+            coluna = coluna + 1
+    bingo.append(linha)
 
 for linha in bingo:
-for col in linha:
-print(str(col) + '\t', end = ' ')
-print('')
+    for col in linha:
+        print(str(col) + '\t', end = ' ')
+    print('')
